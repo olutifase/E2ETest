@@ -1,3 +1,5 @@
+import {create_adviser_page} from "./create_adviser_page";
+
 var faker = require('faker');
 export class create_assistant_page {
 
@@ -63,3 +65,4 @@ export class create_assistant_page {
     }
 }
 
+export const create_assistant = new create_assistant_page();

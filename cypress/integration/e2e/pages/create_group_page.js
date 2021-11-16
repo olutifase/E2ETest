@@ -1,3 +1,5 @@
+import {create_assistant_page} from "./create_assistant_page";
+
 var faker = require('faker');
 export class create_group_page {
 
@@ -8,7 +10,7 @@ export class create_group_page {
     createGroup = '#open-create-adviser-group > .main-action-text';
     groupNameField = '.auto > :nth-child(1) > .ng-pristine';
     abbreviationField = ':nth-child(2) > .ng-untouched';
-    createGroup = '.notice-container > .ng-fa-icon > .svg-inline--fa > path';
+    createGroupNameField = '.notice-container > .ng-fa-icon > .svg-inline--fa > path';
 
     enterUsername() {
         cy.get(this.usernameField).type('admin.olu@oxfordrisk.com')
@@ -32,4 +34,17 @@ export class create_group_page {
         cy.get(this.groupNameField).type( 'AJamal')
     }
 
+    enterAbbreviation() {
+        cy.get(this.abbreviationField).type( 'AJamal')
+    }
+
+    enterCreateGroupName() {
+        cy.get(this.createGroupNameField).type( 'AJamal')
+    }
+
+    clickGroupsNameField() {
+
+    }
 }
+
+export const create_group = new create_group_page();

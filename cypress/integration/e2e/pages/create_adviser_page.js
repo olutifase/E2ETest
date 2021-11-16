@@ -1,3 +1,5 @@
+import {create_admin_page} from "./create_admin_page";
+
 var faker = require('faker');
 export class create_adviser_page {
 
@@ -58,7 +60,9 @@ export class create_adviser_page {
         cy.get(this.officeLocationField).type('Zurich')
     }
 
-    clickCreateAdminBtn() {
+    clickCreateAdviserBtn() {
         cy.get(this.createAdviserBtn).click()
     }
 }
+
+export const create_adviser = new create_adviser_page();
